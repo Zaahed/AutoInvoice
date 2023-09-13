@@ -6,4 +6,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: composer create-project magento/magento-coding-standard --stability=dev magento-coding-standard
-      - run: php magento-coding-standard/vendor/bin/phpcs --ignore=.github/ magento-coding-standard/ --standard=Magento2 .
+      - run: php magento-coding-standard/vendor/bin/phpcs --ignore=.github/,magento-coding-standard/ --standard=Magento2 .
