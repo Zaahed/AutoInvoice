@@ -5,5 +5,6 @@ jobs:
   run-phpcs-with-magento-coding-standard:
     runs-on: ubuntu-latest
     steps:
-      - run: composer create-project magento/magento-coding-standard --stability=dev magento-coding-standard
+      - run: git clone git@github.com:magento/magento-coding-standard.git
+      - run: composer install -d magento-coding-standard
       - run: php magento-coding-standard/vendor/bin/phpcs --standard=Magento2 .
