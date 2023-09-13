@@ -8,4 +8,4 @@ jobs:
       - run: git clone https://github.com/squizlabs/PHP_CodeSniffer.git
       - run: composer create-project magento/magento-coding-standard --stability=stable magento-coding-standard
       - run: php PHP_CodeSniffer/bin/phpcs --config-set installed-paths magento-coding-standard
-      - run: php PHP_CodeSniffer/bin/phpcs --standard=Magento2 and Magento2Framework .
+      - run: php PHP_CodeSniffer/bin/phpcs --standard='Magento2 and Magento2Framework' .
