@@ -1,8 +1,8 @@
 name: run-phpcs
-run-name: Use PHP_CodeSniffer with Magento Coding Standard.
+run-name: Run PHP_CodeSniffer with Magento Coding Standard.
 on: workflow_dispatch
 jobs:
-  install-phpcs-with-magento-coding-standard:
+  run-phpcs-with-magento-coding-standard:
     runs-on: ubuntu-latest
     steps:
       - run: composer create-project magento/magento-coding-standard --stability=stable magento-coding-standard
