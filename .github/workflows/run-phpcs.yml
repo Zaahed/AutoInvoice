@@ -9,5 +9,5 @@ jobs:
         uses: actions/checkout@v4
       - name: Install Magento Coding Standard using Composer.
         run: composer create-project magento/magento-coding-standard --stability=dev magento-coding-standard
-      - name: run PHP_CodeSniffer with Magento Coding Standard.
-      - run: php magento-coding-standard/vendor/bin/phpcs --ignore=.github/,magento-coding-standard/ --standard=Magento2 .
+      - name: Run PHP_CodeSniffer with Magento Coding Standard.
+        run: php magento-coding-standard/vendor/bin/phpcs --ignore=.github/,magento-coding-standard/ --standard=Magento2 .
