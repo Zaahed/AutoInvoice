@@ -1,6 +1,8 @@
 name: run-phpcs
 run-name: Run PHP_CodeSniffer with Magento Coding Standard.
 on: workflow_dispatch
+env:
+  working-directory: /home/runner/work/AutoInvoice
 jobs:
   run-phpcs-with-magento-coding-standard:
     runs-on: ubuntu-latest
