@@ -1,0 +1,11 @@
+name: run-phpcs
+run-name: Use PHP_CodeSniffer with Magento Coding Standard.
+on: workflow_dispatch
+jobs:
+  install-phpcs-with-magento-coding-standard:
+    runs-on: ubuntu-latest
+    steps:
+      - run: git clone https://github.com/squizlabs/PHP_CodeSniffer.git
+      - run: composer create-project magento/magento-coding-standard --stability=stable magento-coding-standard
+      - run: php PHP_CodeSniffer/bin/phpcs --config-set installed-paths magento-coding-standard
+      - run: php PHP_CodeSniffer/bin/phpcs --standard=Magento2 .
