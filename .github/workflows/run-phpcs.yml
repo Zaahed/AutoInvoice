@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repository.
-        run: actions/checkout@v4
+        uses: actions/checkout@v4
         
       - name: Install Magento Coding Standard using Composer.
         run: composer create-project magento/magento-coding-standard --stability=dev magento-coding-standard
