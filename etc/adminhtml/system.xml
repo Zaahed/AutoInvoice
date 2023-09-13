@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="sales">
+            <group id="auto_invoice" translate="label" type="text" sortOrder="300" showInDefault="1" showInWebsite="1">
+                <label>Auto Invoice</label>
+                <field id="enable" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1">
+                    <label>Enable Auto Invoice</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Will automatically create an invoice after order placement.</comment>
+                </field>
+                <field id="payment_methods" translate="label" type="multiselect" sortOrder="20" showInDefault="1" showInWebsite="1">
+                    <label>Payment Methods</label>
+                    <source_model>Zaahed\AutoInvoice\Model\Config\Source\OfflinePaymentMethods</source_model>
+                    <comment>Select the payment methods for which an invoice should automatically be created.</comment>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
