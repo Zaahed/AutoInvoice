@@ -1,5 +1,5 @@
 name: run-phpcs
-run-name: Check files using PHP_CodeSniffer with Magento Coding Standard.
+run-name: Run PHP_CodeSniffer with Magento Coding Standard.
 on: workflow_dispatch
 jobs:
   run-phpcs-with-magento-coding-standard:
