@@ -11,8 +11,8 @@ jobs:
         run: composer config -g http-basic.repo.magento.com $MAGENTO_PUB_KEY $MAGENTO_PRIVATE_KEY
       - name: Add Magento 2 composer repository.
         run: composer config repositories.repo.magento.com composer https://repo.magento.com
-      - name: Create composer Magento 2 project.
-        run: composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition magento2
+      - name: Install composer Magento 2 repository
+        run: composer install
       - name: Test
         run: pwd
       - name: Test 2
