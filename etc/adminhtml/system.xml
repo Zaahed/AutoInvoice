@@ -14,6 +14,7 @@
                     <label>Payment Methods</label>
                     <source_model>Zaahed\AutoInvoice\Model\Config\Source\OfflinePaymentMethods</source_model>
                     <comment>Select the payment methods for which an invoice should automatically be created.</comment>
+                    <can_be_empty>1</can_be_empty>
                     <depends>
                         <field id="enable">1</field>
                     </depends>
