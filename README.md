@@ -5,6 +5,19 @@ To install this package with composer run the following commands inside your Mag
 `composer require zaahed/module-auto-invoice`\
 `bin/magento module:enable Zaahed_AutoInvoice`
 
+Check your environment mode `bin/magento deploy:mode:show` and follow one of the two instructions below.
+
+
+For production environments:\
+`bin/magento maintenance:mode enable`\
+`bin/magento setup:di:compile`\
+`bin/magento cache:clean config`\
+`bin/magento maintenance:mode disable`
+
+For developer environments:\
+Remove the contents of the `generated/` folder and run:
+`bin/magento cache:clean config`
+
 ### How to use
 1. Browse to your Magento 2 admin.
 2. Go to Stores > Configuration > Sales > Sales.
