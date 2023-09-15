@@ -8,13 +8,13 @@ To install this package with composer run the following commands inside your Mag
 Check your environment mode `bin/magento deploy:mode:show` and follow one of the two instructions below.
 
 
-For production environments:\
+**For production environments:**\
 `bin/magento maintenance:mode enable`\
 `bin/magento setup:di:compile`\
 `bin/magento cache:clean config`\
 `bin/magento maintenance:mode disable`
 
-For developer environments:\
+**For developer environments:**\
 Remove the contents of the `generated/` folder and run:
 `bin/magento cache:clean config`
 
