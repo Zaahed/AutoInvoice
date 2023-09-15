@@ -9,7 +9,7 @@
     "magento/module-sales": "103.0.*"
   },
   "license": [
-    "Proprietary"
+    "proprietary"
   ],
   "autoload": {
     "files": [
